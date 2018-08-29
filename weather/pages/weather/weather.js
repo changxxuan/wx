@@ -75,32 +75,43 @@ Page({
       header: { 'Content-Type': 'application/json' },
       success: function (res) { 
         var suggestion = {};
-        var temp;
-        temp = that.findsuggestion(res.data.HeWeather6[0].lifestyle, 'comf');
-        suggestion.comf = { brf: temp.brf, txt: temp.txt };
-        temp = that.findsuggestion(res.data.HeWeather6[0].lifestyle, 'cw');
-        suggestion.cw = { brf: temp.brf, txt: temp.txt };
-        temp = that.findsuggestion(res.data.HeWeather6[0].lifestyle, 'drsg');
-        suggestion.drsg = { brf: temp.brf, txt: temp.txt };
-        temp = that.findsuggestion(res.data.HeWeather6[0].lifestyle, 'flu');
-        suggestion.flu = { brf: temp.brf, txt: temp.txt };
-        temp = that.findsuggestion(res.data.HeWeather6[0].lifestyle, 'sport');
-        suggestion.sport = { brf: temp.brf, txt: temp.txt };
-        temp = that.findsuggestion(res.data.HeWeather6[0].lifestyle, 'trav');
-        suggestion.trav = { brf: temp.brf, txt: temp.txt };
-        temp = that.findsuggestion(res.data.HeWeather6[0].lifestyle, 'uv');
-        suggestion.uv = { brf: temp.brf, txt: temp.txt };
+        suggestion = that.findsuggestion(res.data.HeWeather6[0].lifestyle);
         fn(suggestion);
       }
     })
   },
-  findsuggestion: function(resdata, suggestiontype){
-    let i = 0;
-    for(; i < resdata.length; i++){
-      if (resdata[i].type === suggestiontype){
-        return resdata[i];
-      }
-    }
+  findsuggestion: function(resdata){
+    var suggestion = {};
+    var temp = {}
+    temp = resdata.filter(item => {
+      return item.type === 'comf';
+    })[0];
+    suggestion.comf = { brf: temp.brf, txt: temp.txt };
+    temp = resdata.filter(item => {
+      return item.type === 'cw';
+    })[0];
+    suggestion.cw = { brf: temp.brf, txt: temp.txt };
+    temp = resdata.filter(item => {
+      return item.type === 'drsg';
+    })[0];
+    suggestion.drsg = { brf: temp.brf, txt: temp.txt };
+    temp = resdata.filter(item => {
+      return item.type === 'flu';
+    })[0];
+    suggestion.flu = { brf: temp.brf, txt: temp.txt };
+    temp = resdata.filter(item => {
+      return item.type === 'sport';
+    })[0];
+    suggestion.sport = { brf: temp.brf, txt: temp.txt };
+    temp = resdata.filter(item => {
+      return item.type === 'trav';
+    })[0];
+    suggestion.trav = { brf: temp.brf, txt: temp.txt };
+    temp = resdata.filter(item => {
+      return item.type === 'uv';
+    })[0];
+    suggestion.uv = { brf: temp.brf, txt: temp.txt };
+    return suggestion;
   },
   showcity:function(e){
     wx.switchTab({
