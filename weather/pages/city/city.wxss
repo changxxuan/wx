@@ -1,0 +1,43 @@
+.currentcity{
+  background: #ccc;
+  text-align: center;
+  line-height: 50px;
+  color: #099;
+}
+.citycontainer{
+  margin: 5%;
+}
+.province{
+  margin-top: 5%;
+  padding-left: 12px;
+  background: #aaa;
+  color: white;
+  font-size:14px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.leader{
+  padding-left: 12px;
+  background:rgb(229, 235, 231);
+  font-size:14px;
+  line-height: 24px;
+}
+.cities{
+  border: 1px solid #eee;
+}
+.city{
+  padding:5px;
+  color:rgb(7, 44, 207);
+  font-size:12px;
+  display: inline-flex;
+}
+.image{
+  padding: 5px;
+  width: 12px;
+  height: 12px;
+  float: right;
+  transform: rotate(90deg);
+}
+.rotate{
+  transform: rotate(-90deg);
+}

@@ -1,0 +1,162 @@
+text{ 
+  font-weight: lighter;
+  font-size: 12px;
+}
+.city{
+  padding: 2% 5%;
+  overflow: hidden;
+  background: #ddd;
+} 
+.city .curcityname{
+  margin-left: 3% ;
+  margin-right: 10%;
+  font-size: 18px;
+}
+
+.city .curcity{
+  width: 20px;
+  height: 20px;
+}
+.city .updatetime{
+  margin-left: 3%;
+  width:110px;
+  float: right;
+}
+.city .update{
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+.weather{
+  width: 100%;
+  height: 200px;
+  background: rgb(190, 236, 234);
+}
+.weather .weathepng{
+  padding: 5%;
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+.weather .weather_right{ 
+  margin: 5% 10% 0 0 ; 
+  float: right;
+  color:rgb(118, 118, 199);
+  /*background: yellow;*/
+}
+.weather .temperature{
+  display:block;
+  font-size: 36px;
+  /*background: pink;*/
+}
+.weather .param {
+  clear: both;
+  margin: 0 10%;
+  display: flex;
+}
+.weather .param view{
+  flex: 1;
+  text-align: center;
+}
+.weather .param .borderR{
+  border-right: 1px solid #666;
+}
+.weather .param .title{
+  color: #666;
+}
+.weather .param .info{
+  color:rgb(118, 118, 199);
+  display: block;
+}
+
+.forecast{
+  margin: 5px;
+  border: 1px solid #eee;
+  border-radius: 2%;
+}
+.hourlytitle{
+  padding: 10px 0 0 10px;
+  font-size: 18px;
+}
+.hourlyforecast {
+  display: flex;
+  overflow: hidden;
+  margin: 10px;
+  border-top: 1px solid #eee;
+}
+.hourlyforecast .hourlyitem{ 
+  flex: 1;
+  padding: 5px 10px;
+  height: 70px;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+}
+.hourlyforecast .hourlypng{
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.hourlyforecast .hourlytmp{
+  display: block;
+}
+
+.dailyforcast {
+  margin: 3% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* text-align: center; */
+  border-top: 1px solid #eee;
+}
+.dailyforcast .daily{
+  flex: 1;
+}
+.dailyforcast .daily .datename{
+  font-weight: bold;
+}
+.dailyforcast text{
+  /* margin-left: 10px; */
+  display: inline-block;
+}
+
+/*.description{
+  width: 100%;
+  height: 200px;
+}*/
+.description .title{
+  margin-top: 3%;
+  padding-left: 5%;
+  line-height: 40px;
+  background: rgba(2, 3, 49, 0.671);
+  color:white;
+  font-size: 18px;
+}
+.description .content{
+  display: flex;
+  padding-bottom: 1%;
+}
+.description .description_L{
+  padding: 3%;
+  width:20%;
+  text-align: center;
+  background: rgb(190, 236, 234); 
+  float: left;
+}
+.description .description_L image{
+  width: 30px;
+  height: 30px;
+}
+.description text{
+  padding:  2% 3% 0 3%;
+  color: #666;
+  display: block;
+}
+.description .description_R{
+  width:80%;
+  background: #eee;
+}
+.description .description_R .summary{
+  font-size: 15px;
+  color: black;
+}

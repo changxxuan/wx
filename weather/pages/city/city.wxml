@@ -1,0 +1,20 @@
+<view class="container">
+  <view class='currentcity'>
+    <text>当前城市：{{cur_name}}</text>
+  </view>
+  <view class='citycontainer'>
+    <block wx:for="{{citylist}}">
+      <view class="province">{{item.province}}<image src="../../images/arrowright.png" class="image" style='rotate:{{anglelist[index]}}deg'  bindtap='hideLeader' data-id="{{index}}"></image></view>
+      <view style='display:{{displaylist[index]}}'>
+        <block wx:for="{{item.larr}}">
+          <view class="leader">{{item.leader}}</view>
+          <view class='cities'>
+            <block wx:for="{{item.cityarr}}">
+              <text class="city" bindtap='selecttap' id="{{item.id}}">{{item.city}}</text>
+            </block>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view >
+</view>

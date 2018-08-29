@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/weather/weather",
+    "pages/aboutme/aboutme",
+    "pages/city/city"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "天气预报",
+    "navigationBarTextStyle":"#fff",
+    "backgroundColor":"#666",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#56abe4",
+    "backgroundColor": "#ddd",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/weather/weather",
+      "text": "当前天气",
+      "iconPath": "images/tabbar/weather1.png",
+      "selectedIconPath": "images/tabbar/weather2.png"
+    },
+    {
+      "pagePath": "pages/city/city",
+      "text": "设置城市",
+      "iconPath": "images/tabbar/city1.png",
+      "selectedIconPath": "images/tabbar/city2.png"
+    },
+    {
+      "pagePath": "pages/aboutme/aboutme",
+      "text": "关于作者",
+      "iconPath": "images/tabbar/aboutme1.png",
+      "selectedIconPath": "images/tabbar/aboutme2.png"
+    }],
+    "position":"bottom"
+  }
+}
