@@ -1,13 +1,13 @@
 <view class='container'>
   <view class='city' bindtap='showcity'>
-    <image class='curcity' src='../../images/curcity.png'></image><text class='curcityname'>当前城市：{{basic.location}}</text>
-    <text class='updatetime'>更新时间：\r\n{{update.loc}}</text><image   class='update' src='../../images/update.png'></image>
+    <image class='curcity' src='../../images/curcity.png'></image><text class='curcityname'>{{basic.location}}</text>
+    <text class='updatetime'>{{update.loc}}</text><image   class='update' src='../../images/update.png'></image>
   </view>
   <view class='weather'>
     <image class='weathepng' src='{{weatherpng}}'></image>
     <view class='weather_right'>
       <text class='temperature'>{{now.tmp}}℃</text>
-      <text class=''>{{now.cond_txt}} | {{now.wind_dir}} {{now.wind_sc}}级</text>
+      <text>{{now.cond_txt}} | {{now.wind_dir}} {{now.wind_sc}}级</text>
     </view>
     <view class='param'>
       <view class='borderR'><text class='title'>相对湿度</text><text class='info'>{{now.hum}}%</text></view>
@@ -56,7 +56,6 @@
       <view class="description_R">
         <text class='summary'>{{suggestion.comf.brf}}</text>
         <text class='captain'>{{suggestion.comf.txt}}</text>
-        <text></text>
       </view>
     </view>
 
@@ -68,7 +67,6 @@
       <view class="description_R">
         <text class='summary'>{{suggestion.cw.brf}}</text>
         <text>{{suggestion.cw.txt}}</text>
-        <text></text>
       </view>
     </view>
 
@@ -80,7 +78,6 @@
       <view class="description_R">
         <text class='summary'>{{suggestion.drsg.brf}}</text>
         <text>{{suggestion.drsg.txt}}</text>
-        <text></text>
       </view>
     </view>
 
@@ -92,7 +89,6 @@
       <view class="description_R">
         <text  class='summary'>{{suggestion.flu.brf}}</text>
         <text>{{suggestion.flu.txt}}</text>
-        <text></text>
       </view>
     </view>
 
@@ -104,7 +100,6 @@
       <view class="description_R">
         <text class='summary'>{{suggestion.sport.brf}}</text>
         <text>{{suggestion.sport.txt}}</text>
-        <text></text>
       </view>
     </view>
 
@@ -116,7 +111,6 @@
       <view class="description_R">
         <text class='summary'>{{suggestion.trav.brf}}</text>
         <text>{{suggestion.trav.txt}}</text>
-        <text></text>
       </view>
     </view>
 
@@ -128,7 +122,6 @@
       <view class="description_R">
         <text class='summary'>{{suggestion.uv.brf}}</text>
         <text>{{suggestion.uv.txt}}</text>
-        <text></text>
       </view>
     </view>
     
