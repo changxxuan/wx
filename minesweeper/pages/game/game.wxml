@@ -1,0 +1,62 @@
+<!-- <view class='t'>  
+  <view class='row'>
+    <view class='cell'>
+      <view class="mask {{showBtn? 'show':'hide'}}" bindtap='click' data-nabar="1"></view>
+      <text>{{nabar}}</text>
+    </view>
+    <view class='cell'>
+      <view class="mask {{showBtn? 'show':'hide'}}" bindtap='click' data-nabar="2"></view>
+      <text>{{nabar}}</text>
+    </view>
+    <view class='cell'>
+      <view class="mask {{showBtn? 'show':'hide'}}" bindtap='click' data-nabar="3"></view>
+      <text>{{nabar}}</text>
+    </view>
+  </view>
+  <view class='row'>
+    <view class='cell'></view>
+    <view class='cell'></view>
+    <view class='cell'></view>
+  </view>
+  <view class='row'>
+    <view class='cell'></view>
+    <view class='cell'></view>
+    <view class='cell'></view>
+  </view>
+</view> -->
+<view class='header'>
+  <view>
+    <image class='img' src='../../images/time.png'></image>
+    <text class='time' >{{minute}} : {{second}}</text>
+  </view>
+  <view>
+    <image class='img' src='../../images/bumbimg.bmp'></image>
+    <text class='bound'>{{bound}}</text>
+  </view>
+</view>
+<view class='t'>
+  <view class='tr' wx:for="{{gamearr}}" wx:for-index="row" wx:for-item="rowitem">
+    <view class='td' wx:for="{{rowitem}}" wx:for-index="cell"  wx:for-item="cellitem">
+      <view class="{{(cellitem.status===1 && cellitem.flag===1)?'red':''}} {{(cellitem.status===0 && cellitem.flag===1 && cellitem.wrongFlag)?'showFailure':''}}"><text wx:if='{{cellitem.nabar!==0 && cellitem.status===0 &&cellitem.flag===1}}'>{{cellitem.nabar}}</text></view>
+      <image class='flag' src='../../images/flag.bmp' wx:if='{{cellitem.flag===2 && !cellitem.wrongFlag}}' bindtap='deleteflag' data-row="{{row}}"  data-column="{{cell}}"></image>
+      <!-- <image class='wrongflag' src='../../images/1-1.bmp' wx:if='{{cellitem.status===0 &&cellitem.flag===2 && !failure}}' data-row="{{row}}"  data-column="{{cell}}"></image> -->
+      <view class="mask {{cellitem.flag!==1? 'show':'hide'}}" bindtap='onclick' data-nabar="{{cellitem.nabar}}" data-status="{{cellitem.status}}" data-row="{{row}}"  data-column="{{cell}}"><text wx:if='{{cellitem.flag===3}}' data-row="{{row}}"  data-column="{{cell}}">?</text>
+      <!-- <text wx:if='{{cellitem.status===0 && cellitem.flag===2 && failure}}' data-row="{{row}}"  data-column="{{cell}}">X</text> -->
+      </view>
+    </view>
+  </view>
+</view>
+<view class="foot">
+  <view><button type='primary' size='mini' bindtap='restart'>{{startButtonText}}</button></view>
+  <view><switch bindchange="switchchange"/></view>
+</view>
+<view class="tips">
+    <text>- 点击"开始"开始游戏，"重新开始"放弃当前局\n- Switch 切换标志标记雷</text>
+</view>
+<!-- <view class='container'>
+  <view class='game'>
+    <view class="mask {{showBtn? 'show':'hide'}}" bindtap='click' data-nabar="1"></view>
+    <text>{{nabar}}</text>
+  </view>
+  <button bindtap='onShow'>重新开始</button>
+</view> -->

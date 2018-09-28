@@ -1,0 +1,106 @@
+.header{
+  margin: 15rpx 80rpx;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header view{
+  display: flex;
+  justify-content: center;
+}
+.header text{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+.img{
+  margin-left: 10rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.bound{ 
+  width: 80rpx;
+  text-align: center;
+  background-color:rgba(0, 0, 255, 0.397);
+  color: white;
+}
+.t{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tr{
+  display: flex;
+}
+.tr .td{
+  margin-bottom: 1px;
+  margin-right: 1px;
+  width: 50rpx;
+  height:50rpx;
+  position: relative;
+  line-height: 50rpx;
+  text-align: center;
+  background:lightblue;
+}
+.tr .td .flag{
+  position: relative;
+  width: 40rpx;
+  height:40rpx;
+  z-index: 99;
+}
+/* .tr .td .wrongflag{
+  position: relative;
+  width: 40rpx;
+  height:40rpx;
+  z-index: 999;
+} */
+.tr .td .red{  
+  width: 100%;
+  height: 100%; 
+  background: red;
+  /* background-image: url('../../images/bumb.png');
+  background-size: 50rpx 50rpx; */
+}
+.tr .td .showFailure{
+  color: red;
+  font-size: 100%;
+}
+.tr .td .errorMark{  
+  width: 100%;
+  height: 100%; 
+  background: black;
+  /* background-image: url('../../images/bumb.png');
+  background-size: 50rpx 50rpx; */
+}
+/* .tr .td text{  
+  position: relative;
+} */
+.game{
+  width: 50rpx;
+  height:50rpx;
+  position: relative;
+  background: yellow;
+  border: solid 1px #ddd;
+  line-height: 50rpx;
+  text-align: center;
+}
+.mask{position: absolute; top:0; left: 0;  width: 40rpx; height:40rpx; line-height: 40rpx; background: #bbb; border-width: 5rpx; border-style: solid; border-color: #ddd #999 #999 #ddd; }
+.show{
+}
+.hide{
+  display: none;
+}
+.success{
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top:0;
+}
+.foot{
+  margin: 3%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.tips {
+  margin-left: 40rpx;
+  font-size: 30rpx;
+  color: gray;
+}

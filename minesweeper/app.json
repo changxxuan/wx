@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/game/game",
+    "pages/aboutme/aboutme",
+    "pages/setting/setting"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "扫雷",
+    "navigationBarTextStyle":"#fff",
+    "backgroundColor":"#666",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#56abe4",
+    "backgroundColor": "#ddd",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/game/game",
+      "text": "游戏",
+      "iconPath": "images/game.png",
+      "selectedIconPath": "images/game_h.png"
+    },
+    {
+      "pagePath": "pages/setting/setting",
+      "text": "设置",
+      "iconPath": "images/setting.png",
+      "selectedIconPath": "images/setting_h.png"
+    },
+    {
+      "pagePath": "pages/aboutme/aboutme",
+      "text": "关于",
+      "iconPath": "images/aboutme.png",
+      "selectedIconPath": "images/aboutme_h.png"
+    }],
+    "position":"bottom"
+  }
+}

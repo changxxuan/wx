@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="about">   
+    <text>产品名称： 扫雷</text>
+    <text>版本号： {{version}}</text>
+    <text>开发时间：2018年9月</text>
+  </view>
+  <view class="about aboutme">
+    <text class="title">作者</text><text>charice</text>
+    <text class="title">邮箱</text><text>1181122747@qq.com</text>
+    <text class="title">GitHub</text><text>https://github.com/changxxuan</text>
+  </view>
+</view>
