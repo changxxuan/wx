@@ -1,2 +1,18 @@
 <!--pages/city/city.wxml-->
-<text>pages/city/city.wxml</text>
+<view class='container' >
+  <view class='group'>
+    <text>设置行数</text>
+    <slider bindchange='rowChange' show-value min='10' max='15' value='{{row}}'></slider>
+  </view>
+  <view class='group'>
+    <text>设置列数</text>
+    <slider bindchange='columnChange' show-value min='8' max='12' value='{{column}}'></slider>
+  </view>
+  <view class='group'>
+    <text>设置雷数</text>
+    <slider bindchange='boundChange' show-value min='10' max='40' value='{{bound}}'></slider>
+  </view>
+  <view class='confirm'>
+   <button type='primary' size='mini' bindtap='confirm' >确定</button>
+  </view>
+</view>

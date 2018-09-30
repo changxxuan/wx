@@ -197,7 +197,7 @@ Page({
         count+=1; 
       }
     }
-    that.setData({gamearr:arrmap});
+    that.setData({ gamearr: arrmap, bound: app.globalData.bound});
     //console.log(that.data.gamearr);
   },
   countnabar: function(row, column){

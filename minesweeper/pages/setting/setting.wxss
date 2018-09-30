@@ -1,1 +1,8 @@
 /* pages/city/city.wxss */
+.group{
+  margin: 60rpx 30rpx;
+}
+.confirm{
+  display: flex;
+  justify-items: center;
+}

@@ -47,7 +47,7 @@ App({
     version:"1.0.0",
 
     row: 12,
-    column: 8,
-    bound: 10
+    column: 10,
+    bound: 20
   }
 })

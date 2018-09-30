@@ -1,13 +1,32 @@
 // pages/city/city.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    row:app.globalData.row,
+    column: app.globalData.column,
+    bound: app.globalData.bound
   },
-
+  confirm: function(){
+    wx.switchTab({
+      url: '../game/game'
+    })
+  },
+  rowChange:function(e){
+    app.globalData.row = e.detail.value;
+    // var that = this;
+    // var row = e.detail.value;
+    // that.setData({ row: row});
+  },
+  columnChange: function (e) {
+    app.globalData.column = e.detail.value;
+  },
+  boundChange: function (e) {
+    app.globalData.bound = e.detail.value;
+  },
   /**
    * 生命周期函数--监听页面加载
    */
