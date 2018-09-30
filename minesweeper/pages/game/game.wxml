@@ -1,29 +1,3 @@
-<!-- <view class='t'>  
-  <view class='row'>
-    <view class='cell'>
-      <view class="mask {{showBtn? 'show':'hide'}}" bindtap='click' data-nabar="1"></view>
-      <text>{{nabar}}</text>
-    </view>
-    <view class='cell'>
-      <view class="mask {{showBtn? 'show':'hide'}}" bindtap='click' data-nabar="2"></view>
-      <text>{{nabar}}</text>
-    </view>
-    <view class='cell'>
-      <view class="mask {{showBtn? 'show':'hide'}}" bindtap='click' data-nabar="3"></view>
-      <text>{{nabar}}</text>
-    </view>
-  </view>
-  <view class='row'>
-    <view class='cell'></view>
-    <view class='cell'></view>
-    <view class='cell'></view>
-  </view>
-  <view class='row'>
-    <view class='cell'></view>
-    <view class='cell'></view>
-    <view class='cell'></view>
-  </view>
-</view> -->
 <view class='header'>
   <view>
     <image class='img' src='../../images/time.png'></image>
@@ -37,7 +11,16 @@
 <view class='t'>
   <view class='tr' wx:for="{{gamearr}}" wx:for-index="row" wx:for-item="rowitem">
     <view class='td' wx:for="{{rowitem}}" wx:for-index="cell"  wx:for-item="cellitem">
-      <view class="{{(cellitem.status===1 && cellitem.flag===1)?'red':''}} {{(cellitem.status===0 && cellitem.flag===1 && cellitem.wrongFlag)?'showFailure':''}}"><text wx:if='{{cellitem.nabar!==0 && cellitem.status===0 &&cellitem.flag===1}}'>{{cellitem.nabar}}</text></view>
+      <view class="{{(cellitem.status===1 && cellitem.flag===1)?'red':''}} {{(cellitem.status===0 && cellitem.flag===1 && cellitem.wrongFlag)?'showFailure':''}}">
+        <text wx:if='{{cellitem.nabar===1 && cellitem.status===0 &&cellitem.flag===1}}' style='color:darkblue'>{{cellitem.nabar}}</text>
+        <text wx:if='{{cellitem.nabar===2 && cellitem.status===0 &&cellitem.flag===1}}' style='color:green'>{{cellitem.nabar}}</text>
+        <text wx:if='{{cellitem.nabar===3 && cellitem.status===0 &&cellitem.flag===1}}' style='color:maroon'>{{cellitem.nabar}}</text>
+        <text wx:if='{{cellitem.nabar===4 && cellitem.status===0 &&cellitem.flag===1}}' style='color:blue'>{{cellitem.nabar}}</text>
+        <text wx:if='{{cellitem.nabar===5 && cellitem.status===0 &&cellitem.flag===1}}' style='color:red'>{{cellitem.nabar}}</text>
+        <text wx:if='{{cellitem.nabar===6 && cellitem.status===0 &&cellitem.flag===1}}' style='color:lightseagreen'>{{cellitem.nabar}}</text>
+        <text wx:if='{{cellitem.nabar===7 && cellitem.status===0 &&cellitem.flag===1}}' style='color:black'>{{cellitem.nabar}}</text>
+        <text wx:if='{{cellitem.nabar===8 && cellitem.status===0 &&cellitem.flag===1}}' style='color:gray'>{{cellitem.nabar}}</text>
+      </view>
       <image class='flag' src='../../images/flag.bmp' wx:if='{{cellitem.flag===2 && !cellitem.wrongFlag}}' bindtap='deleteflag' data-row="{{row}}"  data-column="{{cell}}"></image>
       <!-- <image class='wrongflag' src='../../images/1-1.bmp' wx:if='{{cellitem.status===0 &&cellitem.flag===2 && !failure}}' data-row="{{row}}"  data-column="{{cell}}"></image> -->
       <view class="mask {{cellitem.flag!==1? 'show':'hide'}}" bindtap='onclick' data-nabar="{{cellitem.nabar}}" data-status="{{cellitem.status}}" data-row="{{row}}"  data-column="{{cell}}"><text wx:if='{{cellitem.flag===3}}' data-row="{{row}}"  data-column="{{cell}}">?</text>

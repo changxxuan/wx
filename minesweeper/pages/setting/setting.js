@@ -17,7 +17,7 @@ Page({
   },
   rowChange:function(e){
     app.globalData.row = e.detail.value;
-    // var that = this;
+    // var that = this;   //不能同步更新
     // var row = e.detail.value;
     // that.setData({ row: row});
   },

@@ -177,10 +177,13 @@ Page({
     var that = this; 
     this.initgamearr(app.globalData.row, app.globalData.column, app.globalData.bound);
     this.countnabar(app.globalData.row, app.globalData.column);
-    that.setData({ minute: ('00' + 0).slice(-2), second: ('00' + 0).slice(-2) });
   },
   initgamearr: function(row, column, bound){
     var that = this;
+    if (that.data.timer != null) {
+      clearInterval(that.data.timer);
+      that.data.timer = null;
+    }
     let arrmap = [];
     for(let i = 0; i < row; i++){
       arrmap[i] = [];
@@ -197,7 +200,7 @@ Page({
         count+=1; 
       }
     }
-    that.setData({ gamearr: arrmap, bound: app.globalData.bound});
+    that.setData({ gamearr: arrmap, bound: app.globalData.bound, minute: ('00' + 0).slice(-2), second: ('00' + 0).slice(-2), canGameStart: false});
     //console.log(that.data.gamearr);
   },
   countnabar: function(row, column){
