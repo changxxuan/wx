@@ -4,7 +4,7 @@
     <text class='time' >{{minute}} : {{second}}</text>
   </view>
   <view>
-    <image class='img' src='../../images/bumbimg.bmp'></image>
+    <image class='img' src='../../images/bumbing.png'></image>
     <text class='bound'>{{bound}}</text>
   </view>
 </view>
@@ -21,7 +21,7 @@
         <text wx:if='{{cellitem.nabar===7 && cellitem.status===0 &&cellitem.flag===1}}' style='color:black'>{{cellitem.nabar}}</text>
         <text wx:if='{{cellitem.nabar===8 && cellitem.status===0 &&cellitem.flag===1}}' style='color:gray'>{{cellitem.nabar}}</text>
       </view>
-      <image class='flag' src='../../images/flag.bmp' wx:if='{{cellitem.flag===2 && !cellitem.wrongFlag}}' bindtap='deleteflag' data-row="{{row}}"  data-column="{{cell}}"></image>
+      <image class='flag' src='../../images/flag.png' wx:if='{{cellitem.flag===2 && !cellitem.wrongFlag}}' bindtap='deleteflag' data-row="{{row}}"  data-column="{{cell}}"></image>
       <!-- <image class='wrongflag' src='../../images/1-1.bmp' wx:if='{{cellitem.status===0 &&cellitem.flag===2 && !failure}}' data-row="{{row}}"  data-column="{{cell}}"></image> -->
       <view class="mask {{cellitem.flag!==1? 'show':'hide'}}" bindtap='onclick' data-nabar="{{cellitem.nabar}}" data-status="{{cellitem.status}}" data-row="{{row}}"  data-column="{{cell}}"><text wx:if='{{cellitem.flag===3}}' data-row="{{row}}"  data-column="{{cell}}">?</text>
       <!-- <text wx:if='{{cellitem.status===0 && cellitem.flag===2 && failure}}' data-row="{{row}}"  data-column="{{cell}}">X</text> -->

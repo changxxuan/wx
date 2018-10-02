@@ -1,7 +1,7 @@
 .header{
   margin: 15rpx 80rpx;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .header view{
   display: flex;
@@ -41,7 +41,9 @@
   background:lightblue;
 }
 .tr .td .flag{
-  position: relative;
+  position: absolute;
+  top:5rpx;
+  left: 5rpx;
   width: 40rpx;
   height:40rpx;
   z-index: 99;
@@ -97,7 +99,7 @@
 .foot{
   margin: 3%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .tips {
   margin-left: 40rpx;
